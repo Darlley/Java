@@ -15,6 +15,6 @@ public class ex01 {
         } else {
             imposto = salario*0.2;
         }
-        System.out.println("O imposto é de :" + imposto);
+        System.out.println("O imposto é de: " + imposto);
     }
 }
