@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NumeroRetornado {
+public class SomaNumeros {
   puclic static void main(String[] args){
     
     Scanner scan = new Scanner(System.in);
@@ -10,6 +10,6 @@ public class NumeroRetornado {
     System.out.println("Digite outro número: ");
     int numero2 = scan.nextInt();
     
-    System.out.println("O numero informado foi " + (numero1 + numero2));
+    System.out.println("A soma entre os números informados é de " + (numero1 + numero2));
   }
 }
