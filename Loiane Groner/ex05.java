@@ -11,6 +11,6 @@ public class CentimetrosParaMetros {
     
     double centimetros = metros/100;
     
-    System.out.println("O numero informado foi " + centrimetros);
+    System.out.println("O numero informado tem " + centrimetros + " centimetros!");
   }
 }
