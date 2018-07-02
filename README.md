@@ -1,6 +1,6 @@
 # starting-java
 
-Resolução de exercícios dos canais:
+Resolução de exercícios dos cursos:
 
 DevDojo - http://www.devdojo.com.br/aula?playlistId=PL62G310vn6nHrMr1tFLNOYP_c73m6nAzL
 
