@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ex01 {
 
     public static void main(String[] args){
-        //leia nome usuario e senha. senha não pode ser igua a usuario, mensagem de erro e pedindo novamente
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Digite o nome de usuário: ");
