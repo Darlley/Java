@@ -10,7 +10,7 @@ Loiane Groner - https://loiane.training/course/java-basico/
 
 CERTIFICAÇÃO
 -
-![Curso em Vídeo](https://lh4.googleusercontent.com/URO53tN2KCtCQA_ToEtpSLGxVbW2i4Z3F3h5Vxl9oaw4Kw6f_lFPaF_Sa-C8phzGU6A4uu3bAmvfIgFC80fli-CjP1_OL4dPOAad4FPpNrXEtmnqvUk=w1175)
+![Curso em Vídeo](https://lh6.googleusercontent.com/6qkCK83W6T2XqY-G7Lwu4lQqfp8shef1WbeGRnkU7-DWswPJGlnFxCSecSmawKLp2OzlU2pvTXa4ZANC0nVrEnpNvPSy69Y_4VbxsFufpqC0A5B2IuM=w1175)
 
 LIVROS -lendo
 -
