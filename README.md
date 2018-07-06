@@ -8,6 +8,10 @@ Curso em Vídeo - https://www.cursoemvideo.com/course/curso-java-iniciante/
 
 Loiane Groner - https://loiane.training/course/java-basico/
 
+CERTIFICAÇÃO
+-
+![Curso em Vídeo](https://lh4.googleusercontent.com/URO53tN2KCtCQA_ToEtpSLGxVbW2i4Z3F3h5Vxl9oaw4Kw6f_lFPaF_Sa-C8phzGU6A4uu3bAmvfIgFC80fli-CjP1_OL4dPOAad4FPpNrXEtmnqvUk=w1175)
+
 LIVROS -lendo
 -
 ![Use a cabeça](https://cache.skoob.com.br/local/images//bkgdZg0F7tti_VIQGNiO0TnA3U4=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/3978/USE_A_CABECAA_JAVA__1231445892B.jpg)
