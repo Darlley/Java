@@ -12,5 +12,6 @@ public class ex06 {
     double area = Math.PI * Math.pow(raio, 2);
     
     System.out.println("A área é " + area);
+    
   }
 }
