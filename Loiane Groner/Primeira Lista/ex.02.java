@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NumeroRetornado {
+public class ex02 {
   puclic static void main(String[] args){
     
     Scanner scan = new Scanner(System.in);
@@ -8,5 +8,6 @@ public class NumeroRetornado {
     System.out.println("Digite um número: ");
     int numero = scan.nextInt();
     System.out.println("O numero informado foi " + numero);
+    
   }
 }
