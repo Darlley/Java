@@ -6,7 +6,7 @@ public class ex01 {
 
         Scanner scan = new Scanner(System.in);
 
-  // - - - - - - - - - - - - - - - - - - - -
+  // - - - - - - - - - - - - - - - - - - - - 
 
         System.out.println("Quando voce ganha por hora?");
         double salarioHora = scan.nextDouble();
