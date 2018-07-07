@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SomaNumeros {
+public class ex03 {
   puclic static void main(String[] args){
     
     Scanner scan = new Scanner(System.in);
