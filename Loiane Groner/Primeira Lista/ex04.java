@@ -17,5 +17,6 @@ public class ex04 {
     double media = (nota1 + nota2 + nota3 + nota4)/4;
     
     System.out.println("A média das notas informadas é de " + media);
+    
   }
 }
