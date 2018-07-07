@@ -10,5 +10,6 @@ public class ex09 {
         double temperaturaFahrenheit = ceusios * 1.8 + 32;
 
         System.out.println("A temperatura convertida em Fahrenheit é " + temperaturaFahrenheit);
+        
     }
 }
