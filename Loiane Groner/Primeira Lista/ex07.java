@@ -14,5 +14,6 @@ public class ex07 {
 
         System.out.println("A área do quadrado é " + area);
         System.out.println("O dobro da área é " + dobroArea);
+        
     }
 }
