@@ -14,5 +14,6 @@ public class ex14 {
         double tempoBaixar = arquivoTamanho / internetVelocidade;
         
         System.out.println("O tempo de dowload é de " + tempoBaixar);
+        
     }
 }
