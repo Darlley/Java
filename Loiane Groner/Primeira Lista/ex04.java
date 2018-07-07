@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NumeroRetornado {
+public class ex04 {
   puclic static void main(String[] args){
     
     Scanner scan = new Scanner(System.in);
@@ -16,6 +16,6 @@ public class NumeroRetornado {
     
     double media = (nota1 + nota2 + nota3 + nota4)/4;
     
-    System.out.println("O numero informado foi " + media);
+    System.out.println("A média das notas informadas é de " + media);
   }
 }
