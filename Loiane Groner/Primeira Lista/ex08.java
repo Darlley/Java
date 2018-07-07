@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SalarioPorHora {
+public class ex08 {
 
     public static void main(String[] args){
 
