@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AreaCirculo {
+public class ex06 {
   puclic static void main(String[] args){
     
     Scanner scan = new Scanner(System.in);
@@ -8,8 +8,9 @@ public class AreaCirculo {
     System.out.println("Informe o raio do circulo: ");
     double raio = scan.nextDouble();
     
+    //double area = 3.14 * (raio * raio) 
+    double area = Math.PI * Math.pow(raio, 2);
     
-    double area = 3.14 * (raio * raio)    
-    System.out.println("O numero informado foi " + area);
+    System.out.println("A área é " + area);
   }
 }
