@@ -10,5 +10,6 @@ public class ex09 {
         double ceusios = 5 * (temperaturaFahrenheit-32)/9;
 
         System.out.println("A temperatura convertida em celsius é " + ceusios);
+        
     }
 }
