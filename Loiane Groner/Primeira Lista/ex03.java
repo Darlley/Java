@@ -11,5 +11,6 @@ public class ex03 {
     int numero2 = scan.nextInt();
     
     System.out.println("A soma entre os números informados é de " + (numero1 + numero2));
+    
   }
 }
