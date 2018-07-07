@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ConvercaoTemperatura {
+public class ex09 {
     puclic static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
