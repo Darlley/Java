@@ -14,5 +14,6 @@ public class ex08 {
         double salarioMensal = salarioHora * horasTrabalhadas;
 
         System.out.println("Seu salário ao final do mês é de " + salarioMensal);
+        
     }
 }
