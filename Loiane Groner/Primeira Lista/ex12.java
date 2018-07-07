@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PesoIdeal {
+public class ex12 {
 
     public static void main(String[] args){
 
