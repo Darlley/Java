@@ -20,5 +20,6 @@ public class ex11 {
         System.out.println("O produto do dobro do primeiro com metade do segundo é " + ProdutoA);
         System.out.println("O produto da soma entre o tripro do primeiro com o terceiro é " + ProdutoB);
         System.out.println("O produto do terceiro elevado ao cubo " + ProdutoC);
+        
     }
 }
