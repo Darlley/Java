@@ -1,3 +1,5 @@
+// AULA 13, 14
+
 public class ex02 {
     public static void main(String[] args) {
         
@@ -15,8 +17,10 @@ public class ex02 {
             case 4:
             case 5:
             case 6:
-                System.out.println("Dias úteis");
+                System.out.println("Dia úteis");
                 break;
+            default:
+                System.out.println("Opção inválida!");
         }
        
     }
