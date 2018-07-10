@@ -8,10 +8,8 @@ public class ex06 {
 
         System.out.println("Informe um número: ");
         int umNumero  = scan.nextInt();
-
         System.out.println("Informe outro número: ");
         int outroNumero  = scan.nextInt();
-
         System.out.println("Informe mais um número: ");
         int maisUmNumero  = scan.nextInt();
 
