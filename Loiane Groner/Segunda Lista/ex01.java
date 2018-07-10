@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MaiorNumero {
+public class ex01 {
 
     public static void main(String[] args){
 
