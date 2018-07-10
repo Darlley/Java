@@ -1,18 +1,17 @@
 import java.util.Scanner;
 
-public class ex01 {
+public class ex03 {
 
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
 
-        String umSexo;
         System.out.println("Informe seu sexo [M/F]: ");
-        umSexo = scan.nextLine();
+        String umSexo = scan.nextLine();
 
-        if(umSexo == "F"){
+        if(umSexo.equalsIgnoreCase("f")){
             System.out.println("O sexo é Feminino!");
-        }else if(umSexo == "M"){
+        }else if(umSexo.equalsIgnoreCase("m")){
             System.out.println("O sexo é masculino!");
         }else{
             System.out.println("Sexo Inválido!");
