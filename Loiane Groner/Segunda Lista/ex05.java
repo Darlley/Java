@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ex01 {
+public class ex05 {
 
     public static void main(String[] args){
 
@@ -13,12 +13,12 @@ public class ex01 {
 
         double media = (umaNota + outraNota)/2;
 
-        if(media < 7 ){
+        if(media == 10) {
+            System.out.println("Aprovado com distinção");
+        }else if(media < 7 ){
             System.out.println("Reprovado");
         }else if(media >= 7){
                 System.out.println("Aprovado");
-        }else if(media == 10) {
-            System.out.println("Aprovado com distinção");
         }
     }
 }
