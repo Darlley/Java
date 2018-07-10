@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PositivoNegativo {
+public class ex02 {
 
     public static void main(String[] args){
 
