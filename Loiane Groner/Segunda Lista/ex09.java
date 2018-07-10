@@ -8,10 +8,8 @@ public class ex09 {
 
         System.out.println("Informe o primeiro número: ");
         int primeiroNumero  = scan.nextInt();
-
         System.out.println("Informe o segundo número: ");
         int segundoNumero  = scan.nextInt();
-
         System.out.println("Informe o terceiro número: ");
         int terceiroNumero  = scan.nextInt();
 
@@ -27,8 +25,6 @@ public class ex09 {
             System.out.println(terceiroNumero + ", " + primeiroNumero + ", " + segundoNumero);
         }else if(segundoNumero < terceiroNumero && terceiroNumero <= primeiroNumero){
             System.out.println(primeiroNumero + ", " + terceiroNumero + ", " + segundoNumero);
-        }else{
-            System.out.println(terceiroNumero + ", " + segundoNumero + ", " + primeiroNumero);
         }
     }
 }
