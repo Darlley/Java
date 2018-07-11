@@ -12,22 +12,36 @@ public class ex14 {
         double nota2  = scan.nextDouble();
         
         double media = (nota1 + nota2)/2;
+        String aproveitamento = "";
 
         if(media >= 9 && media <= 10){
-            System.out.println("A");
-            System.out.println("Aprovado");
+            aproveitamento = "A";
         }else if(media >= 7.5 && media < 9){
-            System.out.println("B");
-            System.out.println("Aprovado");
+            aproveitamento = "B";
         }else if(media >= 6.5 && media < 7.5){
-            System.out.println("C");
-            System.out.println("Aprovado");
+            aproveitamento = "C";
         }else if(media >= 4 && media < 6){
-            System.out.println("D");
+            aproveitamento = "D";
             System.out.println("Reprovado");
-        }elsr if(media < 4){
-            System.out.println("E");
+        }else if(media >= 0 && media < 4){
+            aproveitamento = "E";
             System.out.println("Reprovado");
         }
+        
+        System.out.println("Primeira nota: " + nota1);
+        System.out.println("Segunda nota: " + nota2);
+        System.out.println("Média: " + media);
+        System.out.println("Conceito: " + aproveitamento);
+        
+        switch(aproveitamento){
+            case "A":
+            case "B":
+            case "C":
+                System.out.println("APROVADO!");
+                break;
+            case "D":
+            case "E":
+                System.out.println("REPROVADO!");
+        };
     }
 }
