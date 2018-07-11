@@ -5,9 +5,9 @@ public class ex13 {
     
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Informe o número: ");
+        System.out.println("Informe o numeo do dia da semana: ");
         int dia = scan.nextInt();
-        String correspondente = "";
+        String correspondente;
         
         switch (dia){
             case 1:
@@ -37,6 +37,5 @@ public class ex13 {
         }
         
         System.out.println(correspondente);
-
     }
 }
