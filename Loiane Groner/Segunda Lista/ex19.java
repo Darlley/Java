@@ -16,6 +16,7 @@ public class ex18 {
         String operador  = scan.nextInt();
         
         double operacao = 0; 
+        boolean valida = true;
         
         switch(operador){
           case "+":
@@ -32,20 +33,23 @@ public class ex18 {
             break;
           defaut: 
             System.out.println("Operador inválido");
+            valida = false;
         }
         
         System.out.println("Resultado: " + operacao);
-         
-        if(operacao % 2 == 0){
-              System.out.println("O número resultante é par!")
-        }else{
-              System.out.println("O número resultante é impar")
-        }
         
-        if(operacao > 0){
-            System.out.println("O número resultante é positivo!")
-        }else{
-          System.out.println("O número resultante é negativo!")
+        if(valida){
+            if(operacao % 2 == 0){
+                  System.out.println("O número resultante é par!")
+            }else{
+                  System.out.println("O número resultante é impar")
+            }
+
+            if(operacao >= 0){
+                System.out.println("O número resultante é positivo!")
+            }else{
+              System.out.println("O número resultante é negativo!")
+            }
         }
     }
 }
