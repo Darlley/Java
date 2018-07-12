@@ -13,12 +13,6 @@ public class ex18 {
               System.out.println("O número é par!")
         }else{
               System.out.println("O número é impar")
-        }
-        
-        if(numero > 0){
-          System.out.println("O número é positivo!")
-        }else{
-          System.out.println("O número é negativo!")
-        }
+        } 
     }
 }
