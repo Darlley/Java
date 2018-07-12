@@ -4,9 +4,9 @@ LISTAS DE EXERCÍCIOS
 -
 Primeira Lista(✔) - https://www.slideshare.net/loianeg/curso-java-bsico-exerccios-aulas-11-12-13
 
-Segunda Lista(• • •) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-14-15
+Segunda Lista(✔) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-14-15
 
-Terceira Lista(✖) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-16-17 
+Terceira Lista(• • •) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-16-17 
 
 Quarta Lista(✖) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aula-19 
 
