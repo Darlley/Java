@@ -6,15 +6,18 @@ public class ex01 {
 
         Scanner scan = new Scanner(System.in);
 
-        String mensagem = "Informe uma nota entre 0 e 10: ";
+        bolean notaValida = false;
+        
+        do{
+            System.out.println("Informe uma nota entre 0 e 10: ");
+            double nota = scan.nextDouble();
 
-        System.out.println(mensagem);
-        int nota = scan.nextInt();
-
-        while (nota > 10) {
-            System.out.println("Infome uma nota válida: ");
-            nota = scan.nextInt();
-        }
-
+            if(nota > 0 && nota <= 10) {
+                notaValida = true;
+                System.out.println("Você digitou: " + nota);
+            }else{
+                System.out.println("Nota inválida, digite novamente");
+            }
+        } while (!notaValida);
     }
 }
