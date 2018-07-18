@@ -6,17 +6,21 @@ public class ex02 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Digite o nome de usuário: ");
-        String nome = scan.nextLine();
-
-        System.out.println("Digite sua senha: ");
-        String senha = scan.nextLine();
-
+        boolean infoValidas = false;
         do {
-            System.out.println("Nome de usuário e senha não podem ser iguais");
+            System.out.println("Digite o nome de usuário: ");
+            String nome = scan.next();
+
             System.out.println("Digite sua senha: ");
-            senha = scan.nextLine();
-        }while (nome == senha);
+            String senha = scan.next();
+            
+            if(nome.equalsIgnoreCase(senha)){
+                System.out.print("Senha e usuario não podem ser parecidos!");
+            } else {
+                infoValidas = true;
+                System.out.println("Completado com sucesso!");
+            }
+        } while (!infoValidas);
 
     }
 }
