@@ -16,9 +16,14 @@ CERTIFICAÇÃO
 
 LIVROS -lendo
 -
-![Use a cabeça](https://cache.skoob.com.br/local/images//bkgdZg0F7tti_VIQGNiO0TnA3U4=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/3978/USE_A_CABECAA_JAVA__1231445892B.jpg)
-![Introdução à Arquitetura](https://cache.skoob.com.br/local/images//_Ob0IHOD84QCa9VJ0dAj4uNIVv4=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/211872/INTRODUCAO__ARQUITETURA_E_DESIGN_DE_SOF_1366300749B.jpg)
+![Algoritmos em Java](https://cache.skoob.com.br/local/images//jYbPZnvSB0nDiJ65XLWrGm8FVy8=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/646479/ALGORITMOS_EM_JAVA_1484943310646479SK1484943310B.jpg)
 ![Java e Orientação a Objetos](https://cache.skoob.com.br/local/images//e0nZOHXZzdsnv4f0Haa7UNyn9AE=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/437383/DESBRAVANDO_JAVA_E_ORIENTACAO__1424580120437383SK1424580120B.jpg)
+![Introdução à Arquitetura Java](https://cache.skoob.com.br/local/images//_Ob0IHOD84QCa9VJ0dAj4uNIVv4=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/211872/INTRODUCAO__ARQUITETURA_E_DESIGN_DE_SOF_1366300749B.jpg)
 ![Sistemas Operacionais com Java](https://cache.skoob.com.br/local/images//UG_-NvusXfMIbyerMRgRXVI6mTg=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/180715/SISTEMAS_OPERACIONAIS_COM_JAVA_1310149653B.jpg)
 ![Java em Rede](https://cache.skoob.com.br/local/images//MB6f4vpTmBBCGPmhL20CJXKcUy0=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/77585/JAVA_EM_REDE_1262901030B.jpg)
-![Programação Orientada a Objetos com Java](https://cache.skoob.com.br/local/images//P680F95A0hrAj4BBHG9PKoL3yx8=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/714602/393d5a143bb8d5706ab510f84b53e53bB.jpg)
+
+
+PRÓXIMAS LEITURAS
+-
+![Java SE 7 Programmer I](https://cache.skoob.com.br/local/images//y55h7-oph9gsXOH8ZakmHOmZ-T4=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/437386/JAVA_SE_7_PROGRAMMER_I_1424580886437386SK1424580886B.jpg)
+![Java SE 8 Programmer I](https://cache.skoob.com.br/local/images//A7gpmG-I_zRe6_c6by0pwgz3pqA=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/513376/JAVA_SE_8_PROGRAMMER_I_1435770694513376SK1435770694B.jpg)
