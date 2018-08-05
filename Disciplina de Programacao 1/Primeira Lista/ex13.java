@@ -1,6 +1,6 @@
 public clas ex13{
   public static void main(Strin[] args){
-    double temp = InputDouble("Informe a temperatura Célcius: ");
+    double temp = Input.readDouble("Informe a temperatura Célcius: ");
 
     temp = (temp * 32) / 1,8;
 
