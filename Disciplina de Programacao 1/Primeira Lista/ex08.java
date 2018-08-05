@@ -4,8 +4,8 @@ public class ex08{
 
         double area;
 
-        double largura = scan.nextDouble("Informe a largura do retângulo: ");
-        double altura = scan.nextDouble("Informea a altura do retângulo: ");
+        double largura = Input.readDouble("Informe a largura do retângulo: ");
+        double altura = Input.readDouble("Informea a altura do retângulo: ");
         
         area = largura * altura;
         
