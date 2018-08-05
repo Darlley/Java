@@ -4,9 +4,9 @@ public class ex09{
 
         double lucro;
 
-        double pao = scan.nextDouble("Pães vendidos: ");
-        double leite = scan.nextDouble("Leite vendidos: ");
-        double bolo = scan.nextDouble("Bolos vendidos: ");
+        double pao = Input.readDouble("Pães vendidos: ");
+        double leite = Input.readDouble("Leite vendidos: ");
+        double bolo = Input.readDouble("Bolos vendidos: ");
         
         lucro = ((0.15 * pao) - (0.9 * pao)) + ((1 * leite) - (0.70 * leite)) + ((5 * bolo) + (3 * bolo));
         
