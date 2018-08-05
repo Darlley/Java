@@ -5,7 +5,7 @@ public class ex07{
         double jose = 1.50;
         double pedro = 1.10;
 
-        double ano = scan.nextDouble("Informe a quantidade de anos: ");
+        double ano = Input.readDouble("Informe a quantidade de anos: ");
         
         jose += (2 *  ano);
         pedro += (3 * ano);
