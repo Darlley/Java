@@ -17,6 +17,7 @@ CERTIFICAÇÃO
 LIVROS -lendo
 -
 ![Algoritmos em Java](https://cache.skoob.com.br/local/images//jYbPZnvSB0nDiJ65XLWrGm8FVy8=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/646479/ALGORITMOS_EM_JAVA_1484943310646479SK1484943310B.jpg)
+![Começando a Programar em Java](https://cache.skoob.com.br/local/images//EQJay-6H10m2iFD0xRXXnUgdn_Y=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/800375/COMECANDO_A_PROGRAMAR_EM_JAVA_1533513968800375SK1533513968B.jpg)
 ![Java e Orientação a Objetos](https://cache.skoob.com.br/local/images//e0nZOHXZzdsnv4f0Haa7UNyn9AE=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/437383/DESBRAVANDO_JAVA_E_ORIENTACAO__1424580120437383SK1424580120B.jpg)
 ![Introdução à Arquitetura Java](https://cache.skoob.com.br/local/images//_Ob0IHOD84QCa9VJ0dAj4uNIVv4=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/211872/INTRODUCAO__ARQUITETURA_E_DESIGN_DE_SOF_1366300749B.jpg)
 ![Sistemas Operacionais com Java](https://cache.skoob.com.br/local/images//UG_-NvusXfMIbyerMRgRXVI6mTg=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/180715/SISTEMAS_OPERACIONAIS_COM_JAVA_1310149653B.jpg)
