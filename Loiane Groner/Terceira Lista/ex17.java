@@ -6,19 +6,17 @@ public class ex17{
 
         Scanner scan = new Scanner(System.in);
 
-        int screen = 0;
-        int aux;
-        
         System.out.println("Informe um número: ");
-        int numeroFat = scan.nextInt
-        
-        aux = numeroFat;
-        
-        while(aux > 0){
-          screen += aux * (aux-1);
-          aux--;
+        int num = scan.nextInt();
+
+        System.out.print(num + "! = ");
+
+        int fatorial = 1;
+        for(int i=num; i>0; i--){
+            fatorial *= i;
+            System.out.println(i);
         }
-        
-        System.out.println("O fatorial de " + numerofat + " é: " + screen)
+
+        System.out.println("Resultado: " + fatorial);
     }
 }
