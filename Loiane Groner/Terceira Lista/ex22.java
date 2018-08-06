@@ -2,28 +2,24 @@ import java.util.Scanner;
 
 public class ex22{
 
-  public static void main(String[] args) {
-  
-      int continue = 1;
-      dpuble continue = 0;
-      double total;
+    public static void main(String[] args) {
 
-      for(double i = 0; continue == 1; i++){
-        while(quantidade => i){
-          System.out.print("Informe a quantidade de CDs: ")
-          quantidade = scan.nextDouble();
+        Scanner scan = new Scanner(System.in);
 
-          System.out.print("Infore o preço do primeiro CD: ")
-          total = scan.nextDouble();
+        System.out.println("Informe a quantidade de CD: ");
+        int cds = scan.nextInt();
 
-          System.out.print("Tem mais turmas? [1] - Sim [2] - Não ")
-          continue = scan.nextInt();
+        double preco;
+        double soma = 0;
 
-          total += quantidade;
-          total += (total / i);
+        for(int i = 1; i <= cds; i++){
+            System.out.println("Informe o valor do CD " + i + ":");
+            preco = scan.nextDouble();
 
+            soma += preco;
         }
-      }
-      
-      System.out.print("A média é " + total);
+
+        double media = soma / cds;
+        System.out.println("Média: " + media);
+    }
 }
