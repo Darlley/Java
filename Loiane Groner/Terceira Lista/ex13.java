@@ -11,6 +11,11 @@ public class ex13{
         System.out.println("Informe o expoente: ");
         int expoente = scan.nextInt();
 
-        System.out.println(base + " elevado a " + expoente + " = " + (base ^ expoente));
+        int resultado = base;
+        for(int i = 1; i < expoente; i++){
+            resultado *= base;
+        }
+
+        System.out.println(base + " elevado a " + expoente + " = " + resultado);
     }
 }
