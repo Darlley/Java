@@ -6,20 +6,23 @@ public class ex19{
 
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("Informe a quantidade de notas: ");
+        int notas = scan.nextInt();
+
+        double soma = 0;
         double media = 0;
-        int resp = 1;
-        int i = 0;
+        double nota = 0;
 
-        while(resp == 1){
-            System.out.println("Informe uma nota: ");
-            double nota = scan.nextDouble();
-            System.out.println("Deseja continuar? [1] - Sim/[2] - Não");
-            resp = scan.nextInt();
+        for(int i = 0; i<notas;i++){
+            System.out.println("Informe a nota " + (i+1) + ": ");
+            nota = scan.nextInt();
 
-            nota += nota;
-            i++;
-            media = nota/i;
+            soma += nota;
         }
+
+        media = soma / notas;
+
+        System.out.println("Soma: " + soma);
         System.out.println("Media: " + media);
     }
 }
