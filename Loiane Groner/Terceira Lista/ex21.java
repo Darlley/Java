@@ -2,27 +2,35 @@ import java.util.Scanner;
 
 public class ex21{
 
-  public static void main(String[] args) {
-    
-      double alunos = 0;
-      int continue = 1;
-      double total;
+    public static void main(String[] args) {
 
-      for(double i = 0; continue == 1; i++){
-        System.out.print("Informe a quantidade de alunos: ")
-        alunos = scan.nextDouble();
-        
-        if(alunos > 40){
-          System.out.print("Quantidade de alunos não permitida!")
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Informe a quantidade de turmas: ");
+        int numTurmas = scan.nextInt();
+
+        int numAlunos;
+        int soma = 0;
+        boolean invalido = true;
+
+        for(int i = 1; i <= numTurmas; i++){
+
+            invalido = true;
+            do {
+                System.out.println("Informe o numero de alunos da turma " + i + ":");
+                numAlunos = scan.nextInt();
+
+                if (numAlunos <= 40) {
+                    invalido = false;
+                }else{
+                    System.out.println("Numero de alunos inválido!");
+                }
+            }while(invalido);
+
+            soma += numAlunos;
         }
 
-        System.out.print("Tem mais turmas? [1] - Sim [2] - Não ")
-        continue = scan.nextInt();
-        
-        total += alunos;
-        total += (total / i);
-      }
-      
-      System.out.print("A média é " + total);
-  }
+        double media = soma / numTurmas;
+        System.out.println("Média: " + media);
+    }
 }
