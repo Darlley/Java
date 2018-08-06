@@ -16,7 +16,7 @@ public class ex15{
         System.out.println(primeiro);
         System.out.println(segundo);
 
-        for(int i=3; i<=n; i++){
+        for(int i = 3; i <= n; i++){
             proximo = primeiro + segundo;
             primeiro = segundo;
             segundo = proximo;
