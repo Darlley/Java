@@ -15,7 +15,6 @@ public class ex13{
         for(int i = 1; i < expoente; i++){
             resultado *= base;
         }
-
         System.out.println(base + " elevado a " + expoente + " = " + resultado);
     }
 }
