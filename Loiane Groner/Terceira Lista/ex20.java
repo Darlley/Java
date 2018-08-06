@@ -1,21 +1,32 @@
 import java.util.Scanner;
 
-public class ex20{
+public class ex01{
 
-  public static void main(String[] args) {
-    
-      double nota = 0;
-      int continue = 1;
+    public static void main(String[] args) {
 
-      for(double i = 0; continue == 1; i++){
-        System.out.print("Informe uma nota: ")
-        nota = scan.nextDouble();
-        System.out.print("Deseja continuar? [1] - Sim [2] - Não ")
-        continue = scan.nextInt();
+        Scanner scan = new Scanner(System.in);
 
-        nota += (nota / i);
-      }
-      
-      System.out.print("A média é " + nota);
-  }
+        System.out.println("Informe a quantidade de idades: ");
+        int idades = scan.nextInt();
+
+        int idade;
+        int soma = 0;
+        for(int i = 0; i<idades; i++){
+            System.out.println("Informe a idade da pessoa " + (i+1) + ": ");
+            idade = scan.nextInt();
+
+            soma += idade;
+        }
+
+        double media = soma / idades;
+        System.out.println("Media de idade: " + media);
+
+        if(media >= 0 && media <= 25){
+            System.out.println("Jovem!");
+        }else if(media >= 26 && media <= 60 ){
+            System.out.println("Adulto(a)!");
+        }else if(media > 60){
+            System.out.println("idoso(a)!");
+        }
+    }
 }
