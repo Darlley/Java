@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
-public class ex18{
+public class ex018{
 
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
-        
-        int count = 0;
-        
+
+        boolean primo = true;
+
         System.out.println("Informe um número: ");
-        int number = scan.nextInt
-        
-        for(int i = 0; i < number; i++){
-          if(number % i == 0){
-            count++;
-          }
+        int number = scan.nextInt();
+
+        for(int i = 2; i < number; i++){
+            if(number % i == 0){
+                System.out.println("Não é primo!");
+                primo = false;
+                break;
+            }
         }
-        
-        if(count == 2){
-          System.out.print("O número digitado é Primo!")
-        }else{
-          System.out.print("O número digitado não é Primo!")
+
+        if(primo){
+            System.out.print("O número digitado é Primo!");
         }
     }
 }
