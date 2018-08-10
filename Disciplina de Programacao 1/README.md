@@ -4,9 +4,9 @@ Laboratório De Programação I - Prof. Pericles Christian Moraes Lopes
 -
 lISTAS DE EXERCÍCIOS
 -
-Primeira Lista(• • •) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=261105.pdf
+Primeira Lista(✔) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=261105.pdf
 
-Segunda Lista(✖) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=261694.pdf
+Segunda Lista(• • •) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=261694.pdf
 
 Terceira Lista(✖) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=262797.pdf
 
