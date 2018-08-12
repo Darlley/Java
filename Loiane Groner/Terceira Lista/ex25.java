@@ -18,7 +18,6 @@ public class ex25{
         do{
           System.out.println("Deseja continuar comprando?");
           continuarComprando = scan.next();
-
           if(continuarComprando.equalsIgnoreCase("s")){
             output = "Lojas Tabajara\n";
             System.out.println("Quantidades de produtos: ");
@@ -38,11 +37,9 @@ public class ex25{
             troco = total - valorPago;
             output += "Troco: " + troco;
             System.out.printl(output);
-            
           }else{
             sair = true;
           }
-          
         }while(!sair)
     }
 }    
