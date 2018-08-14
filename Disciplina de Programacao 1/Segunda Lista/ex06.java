@@ -2,7 +2,7 @@ public class ex06{
 
     public static void main(String[] args) {
 
-    double maior, menor, media;
+    double n1, n2, maior, menor, media;
     
     System.out.println("Informe um número: ");
     double n1 = Input.readInt();
