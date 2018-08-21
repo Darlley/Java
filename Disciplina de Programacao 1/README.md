@@ -8,9 +8,9 @@ Primeira Lista(✔) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivo
 
 Segunda Lista(✔) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=261694.pdf
 
-Terceira Lista(• • •) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=262797.pdf
+Terceira Lista(✔) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=262797.pdf
 
-Quarta Lista(✖) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=262798.pdf
+Quarta Lista(• • •) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=262798.pdf
 
 Quinta Lista(✖) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=263791.pdf
 
