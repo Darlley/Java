@@ -32,7 +32,7 @@ public class ex01{
 	System.out.println("a) a quantidade de pessoas casadas: " + c);
 	System.out.println("b) a quantidade de pessoas solteiras: " + s);
 	System.out.println("c) a média das idades das pessoas viúvas: " + (media = media/20));
-	System.out.println("d) a porcentagem de pessoas desquitadas ou separadas dentre todas as pessoas analisadas: " + (d*0.2);
+	System.out.println("d) a porcentagem de pessoas desquitadas ou separadas dentre todas as pessoas analisadas: " + (20/100)*d));
 	
   }
 }
