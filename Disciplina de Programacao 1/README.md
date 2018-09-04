@@ -14,7 +14,7 @@ Quarta Lista(✔) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&
 
 Quinta Lista(• • •) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=263791.pdf
 
-Sexta Lista(✖) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=265427.pdf
+Sexta Lista(• • •) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=265427.pdf
 
 Setima Lista(✖) - http://www.siid.ucdb.br/docentes/downloads.php?Dir=arquivos&File=266024.pdf
 
