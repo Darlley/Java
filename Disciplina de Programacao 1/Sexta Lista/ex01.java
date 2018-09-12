@@ -5,7 +5,7 @@
 		boolean naoachou;
 		
 		do{
-			vetor[i] = Input.readInt("Valor "+ (i+1) +": ");
+			vetor[i] = Input.readInt("Valor indíce " + i + ": ");
 			i++;
 		}while(i<20);
 
@@ -23,9 +23,10 @@
 			i++;	
 		}
 		
-		if(indice!=0)
+		if(indice!=0){
 			System.out.println("O valor "+ x +" esta no indice "+ indice + "!");
-		else
+		}else{
 			System.out.println("O valor "+x+" nao esta no vetor!");
+		}
 	}
 }
