@@ -1,4 +1,4 @@
- public class exemplo6{
+ public class ex03{
 	public static void main(String args[]){
 	
 		int i = 0, vetor1 [] = new int[10], vetor2 [] = new int[10], vetor3 [] = new int[10];
