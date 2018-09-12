@@ -12,14 +12,15 @@
 		i=0;
 		indice = 0;
 		
+		System.out.println("INDICES QUE TEM PARES: \n");
 		while(i<20){
 			if(vetor[i] % 2 == 0){
-				System.out.println("\nIndice: "+i);
+				System.out.print(i);
 				indice++;
 			}
-			i++;	
+			i++;
 		}
-		System.out.println("Total pares: " + indice);
+		System.out.println("TOTAL: " + indice);
 
 	}
 }
