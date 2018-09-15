@@ -1,6 +1,6 @@
 public class ex01{
     public static void main(String[] args){
-        int vetorA[] = new int[5], vetorB[] = new int[5];
+        int vetorA[] = new int[5], vetorB[] = new int[vetorA.length];
         vetorA[0] = 1;
         vetorA[1] = 2;
         vetorA[2] = 3;
