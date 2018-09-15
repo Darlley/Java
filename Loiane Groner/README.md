@@ -8,7 +8,7 @@ Segunda Lista(✔) - https://www.slideshare.net/loianeg/curso-java-basico-exerci
 
 Terceira Lista(• • •) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-16-17 
 
-Quarta Lista(✖) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aula-19 
+Quarta Lista(• • •) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aula-19 
 
 Quinta Lista(✖) - https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aula-20 
 
