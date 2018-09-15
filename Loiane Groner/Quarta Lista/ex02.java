@@ -3,12 +3,12 @@ public class ex02{
         int vetorA[] = new int[8], vetorB[] = new int[vetorA.length];
         vetorA[0] = 1;
         vetorA[1] = 2;
-        vetorA[2] = 3;
-        vetorA[3] = 4;
-        vetorA[4] = 5;
-        vetorA[5] = 6;
-        vetorA[6] = 7;
-        vetorA[7] = 8;
+        vetorA[2] = 4;
+        vetorA[3] = 6;
+        vetorA[4] = 8;
+        vetorA[5] = 10;
+        vetorA[6] = 12;
+        vetorA[7] = 14;
 
         for(int i=0; i <= vetorA.length; ++i){
             vetorB[i] = vetorA[i]*2;
