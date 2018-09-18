@@ -5,7 +5,7 @@ public class ex09{
         Scanner scan = new Scanner(System.in);
         int vetorA[] = new int[10];
         int vetorB[] = new int[vetorA.length];
-        int vetorC[] = new int[vetorA.length];
+        double vetorC[] = new double[vetorA.length];
         
         System.out.print("VETOR A:");
         for(int i=0; i<vetorA.length; i++){
@@ -17,7 +17,7 @@ public class ex09{
         for(int i=0; i<vetorA.length; i++){
             System.out.print(i + "º valor: ");
             vetorB[i] = scan.nextInt();
-            vetorC[i] = vetorA[i] * vetorB[i];
+            vetorC[i] = vetorA[i] / vetorB[i];
         }
 
         System.out.print("RESULTADO: ");
