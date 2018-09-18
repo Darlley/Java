@@ -1,29 +1,20 @@
+import java.util.Scanner;
 public class ex01{
     public static void main(String[] args){
-        int vetorA[] = new int[15], vetorB[] = new int[vetorA.length];
-        vetorA[0] = 1;
-        vetorA[1] = 2;
-        vetorA[2] = 3;
-        vetorA[3] = 4;
-        vetorA[4] = 5;
-        vetorA[5] = 6;
-        vetorA[6] = 7;
-        vetorA[7] = 8;
-        vetorA[8] = 9;
-        vetorA[9] = 10;
-        vetorA[10] = 11;
-        vetorA[11] = 12;
-        vetorA[12] = 13;
-        vetorA[13] = 14;
-        vetorA[14] = 15;
+        Scanner scan = new Scanner(System.in);
+        int vetorA[] = new int[15];
+        Double vetorB[] = new double[vetorA.length];
+        
+        for(int i=0; i<=vetorA.length; i++){
+            System.out.print("Informe o valor " + (i+1));
+            vetorA[i] = scan.nextInt(); 
+            vetorB[i] = Math.sqrt(vetorA[i]);
+        }
+        
+        DecimalFormat df = new DecimalFormat("###,###.###");
 
         for(int i=0; i <= vetorA.length; ++i){
-            vetorB[i] = sqrt(vetorA[i]);
-            System.out.println("Valor adicionado no índice " + i + ": " + vetorB[i]);
+            System.out.println("Valor adicionado no índice " + i + ": " + df.format(vetorB[i]));
         }
-    }
-
-    private static int sqrt(int i) {
-
     }
 }
