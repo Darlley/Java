@@ -3,7 +3,7 @@ public class ex06{
     public static void main(String[] args){
         
         Scanner scan = new Scanner(System.in);
-        int vetorA[] = new int[15];
+        int vetorA[] = new int[10];
         int vetorB[] = new int[vetorA.length];
         int vetorC[] = new int[vetorA.length];
         
