@@ -7,10 +7,11 @@ public class ex02{
 		
 		for(int i=0; i<=6; i++){
 			// ENTRADA DE DADOS
-			System.out.println("DIA " + (i+1));
+			System.out.println("\nDIA " + (i+1));
 			vetor1[i] = Input.readInt("Informe a quantidade de ingressos vendidos para a sala 1: ");
 			vetor2[i] = Input.readInt("Informe a quantidade de ingressos vendidos para a sala 2: ");
 			vetor3[i] = Input.readInt("Informe a quantidade de ingressos vendidos para a sala 3: ");
+			System.out.println("");
 			
 			// A)
 			sala1 += vetor1[i];
