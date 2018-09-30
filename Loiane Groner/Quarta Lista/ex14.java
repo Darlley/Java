@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ex01{
+public class ex14{
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
@@ -12,6 +12,8 @@ public class ex01{
                 impar++;
             }
         }
-        System.out.print("Quantidade de pares: " + (soma/impar));
+        
+        System.out.print("Soma: " + soma);
+        System.out.print("Média: " + (soma/impar));
     }
 }
