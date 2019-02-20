@@ -24,95 +24,104 @@ função para verificar este fato antes de efetuar a divisão. Esta
 função deve ter como parâmetro o denominador da divisão e retornar
 verdadeiro caso o denominador seja nulo e falso caso contrário. */
 
-public class exercicio{
+public class exemplo{
 
 	// C R I A R  M É T O D O  F O R M U L A
-	public static void calculadora(o, v1, v2){
-
-		while(opcao == 2 || opcao == 3 || opcao == 4 || opcao == 5){
-			switch (o) {
-				case 2:
-					result = v1 + v2;
-				case 3:
-					result = v1 - v2;
-				case 4:
-					result = v1 * v2;
-				case 5:
-					result = v1 / v2;
-			}
-			
-			return result;
-		}
-	}
-
-	// M É T O D O  P R I N C I P A L
-	public static void main(String[] args){
-		double valor1;
-		double valor2;
-		int selecionar;
-		
-		System.out.println("====== M E N U ======"); 
+	public static void imprimeMenu(){
+		System.out.println("====== M E N U ======");
 		System.out.println("1 - Entrada de dados");
 		System.out.println("2 - Adição");
 		System.out.println("3 - Subtração");
 		System.out.println("4 - Multiplicação");
 		System.out.println("5 - Divisão");
 		System.out.println("6 - Encerrar");
-		selecionar = Input.readInt("Escolha uma opção: ");
-		
+	}
+	public static void soma(double v1, double v2){
+            System.out.println("Soma: " + (v1 + v2));
+	}
+        public static void subtracao(double v1, double v2){
+            System.out.println("Subtracao: " + (v1 - v2));
+	}
+        public static void multiplicacao(double v1, double v2){
+            System.out.println("Multiplicacao: " + (v1 * v2));
+	}
+        public static void divisao(double v1, double v2){
+            System.out.println("Divisao: " + (v1 / v2));
+	}
+    
+	// M É T O D O  P R I N C I P A L
+	public static void main(String[] args){
+	
+		double valor1=0;
+		double valor2=0;
+		int selecionar = 0;
+				
 		while(selecionar < 1 && selecionar > 6){
 			selecionar = Input.readInt("Escolha uma opção de [1] à [6]: ");
 		}
 		
-		switch (selecionar) {
-			case 1: 
-				valor1 = Input.readDouble("Informe o primeiro valor: ");
-				valor2 = Input.readDouble("Informe o segundo valor: "); 
-			case 2:
-				while(selecionar != 1){
-					selecionar = Input.readInt("Selecione a opção [1]: ");
-					while(selecionar != 1) {
-						selecionar = Input.readInt("Selecione a opção [1]: ");
-					}
-					valor1 = Input.readDouble("Informe o primeiro valor: ");
-					valor2 = Input.readDouble("Informe o segundo valor: "); 
-					
-				}
-			case 3:
-				while(selecionar != 1){
-					selecionar = Input.readInt("Selecione a opção [1]: ");
-					while(selecionar != 1) {
-						selecionar = Input.readInt("Selecione a opção [1]: ");
-					}
-					valor1 = Input.readDouble("Informe o primeiro valor: ");
-					valor2 = Input.readDouble("Informe o segundo valor: "); 
-					
-				}
-			case 4:
-				while(selecionar != 1){
-					selecionar = Input.readInt("Selecione a opção [1]: ");
-					while(selecionar != 1) {
-						selecionar = Input.readInt("Selecione a opção [1]: ");
-					}
-					valor1 = Input.readDouble("Informe o primeiro valor: ");
-					valor2 = Input.readDouble("Informe o segundo valor: "); 
-					
-				}
-			case 5:
-				while(selecionar != 1){
-					selecionar = Input.readInt("Selecione a opção [1]: ");
-					while(selecionar != 1) {
-						selecionar = Input.readInt("Selecione a opção [1]: ");
-					}
-					valor1 = Input.readDouble("Informe o primeiro valor: ");
-					valor2 = Input.readDouble("Informe o segundo valor: "); 
-					
-				}
-			case 6:
-				selecionar = 7;
+                while (selecionar != 6){
+                    imprimeMenu();
+                    selecionar = Input.readInt("Escolha uma opção: ");
+                
+                    switch (selecionar) {
 
-		}
+                            case 1: 
+                                valor1 = Input.readDouble("Informe o primeiro valor: ");
+                                valor2 = Input.readDouble("Informe o segundo valor: ");
+                                break;
+                            case 2:
+                                while(selecionar != 1){
+                                    selecionar = Input.readInt("Selecione a opção [1]: ");
+                                    while(selecionar != 1) {
+                                        selecionar = Input.readInt("Selecione a opção [1]: ");
+                                    }
+                                    valor1 = Input.readDouble("Informe o primeiro valor: ");
+                                    valor2 = Input.readDouble("Informe o segundo valor: ");
+                                }
+                                soma(valor1, valor2);
+                                break;
+                            case 3:
+                                    while(selecionar != 1){
+                                            selecionar = Input.readInt("Selecione a opção [1]: ");
+                                            while(selecionar != 1) {
+                                                    selecionar = Input.readInt("Selecione a opção [1]: ");
+                                            }
+                                            valor1 = Input.readDouble("Informe o primeiro valor: ");
+                                            valor2 = Input.readDouble("Informe o segundo valor: "); 
+
+                                    }
+                                    subtracao(valor1, valor2);
+                                    break;
+                            case 4:
+                                    while(selecionar != 1){
+                                            selecionar = Input.readInt("Selecione a opção [1]: ");
+                                            while(selecionar != 1) {
+                                                    selecionar = Input.readInt("Selecione a opção [1]: ");
+                                            }
+                                            valor1 = Input.readDouble("Informe o primeiro valor: ");
+                                            valor2 = Input.readDouble("Informe o segundo valor: "); 
+
+                                    }
+                                    multiplicacao(valor1, valor2);
+                                    break;
+                            case 5:
+                                    while(selecionar != 1){
+                                            selecionar = Input.readInt("Selecione a opção [1]: ");
+                                            while(selecionar != 1) {
+                                                    selecionar = Input.readInt("Selecione a opção [1]: ");
+                                            }
+                                            valor1 = Input.readDouble("Informe o primeiro valor: ");
+                                            valor2 = Input.readDouble("Informe o segundo valor: "); 
+
+                                    }
+                                    divisao(valor1, valor2);
+                                    break;
+                            case 6:
+                                    selecionar = 7;
+
+                    }
+                }
 		
-		calculadora(selecionar, valor1, valor2);
 	}
 }
