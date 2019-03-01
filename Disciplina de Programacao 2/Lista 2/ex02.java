@@ -38,9 +38,26 @@ public class ex02 {
             precosMedios[i] = Input.readDouble("Informe o preço médio do restaurante " + (i+1) + ": ");
         }
     }
+    public static void restaurantesBusca(String nomes[], String enderecos[], String comida[], double precosMedios[], String tipoComida, int numRest, double buscaPrecos){
+        int count = 0;
+        System.out.println("");
+   
+        for(int i=0; i< numRest; i++){
+            if(tipoComida.equals(comida[i]) && precosMedios[i] <= buscaPrecos){
+                System.out.println("RESTAURANTE ENCONTRADO: ");
+                System.out.println("Restaurante " + (i+1) + " = " + nomes[i] + " " + enderecos[i] + " " + comida[i] + " " + precosMedios[i]);
+            }else{
+                count++;
+            }
+        }
+        if(count == numRest){
+            System.out.println("RESTAURANTES NÃO ENCONTRADO!");
+        }
+    }
     public static void main(String[] args) {
-        String nomes[], enderecos[], comida[];
+        String nomes[], enderecos[], comida[], tipoComida;
         double[] precosMedios;
+        double buscaPrecos;
         int numRest;
         
         numRest = Input.readInt("Informe a quantidade de restaurantes: ");
@@ -55,5 +72,9 @@ public class ex02 {
         incicializaRestaurantesUsuario(nomes, enderecos, comida, precosMedios, numRest);
         imprimeRestaurantes(nomes, enderecos, comida, precosMedios, numRest);
         
+        
+        tipoComida = Input.readString("Informe tipo de comida desejada: ");
+        buscaPrecos = Input.readDouble("Informe o preço médio desejavel: ");
+        restaurantesBusca(nomes, enderecos, comida, precosMedios, tipoComida, numRest, buscaPrecos);
     }
 }
