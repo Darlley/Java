@@ -12,7 +12,8 @@ instância. Além disso, forneça um método chamado getInvoiceAmount que calcul
 preço por item) e depois retorna o valor como um double. Escreva um aplicativo de teste que demonstra as capacidades da classe Invoice.
 */
 
-public class Invoice {
+public class Invoice { 
+// DO INGLÊS: "FATURA"
     
     //  A T R I B U T O S
     int numero;
