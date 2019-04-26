@@ -378,5 +378,77 @@ public class Jogo {
                 }
             }
         }
+        System.out.println("");
+        
+        // 12
+        System.out.println("👇 DÉCIMO SEGUNDO PASSO");
+        System.out.println("");
+        for(int i=0;i<7;i++){
+            for(int j=0;j<7;j++){       
+                if(i==3 && j==2){
+                    aux = tabela[i][j];
+                    tabela[i][j] = tabela[1][2];
+                    tabela[2][2] = aux;
+                    tabela[1][2] = aux;
+                }
+            }
+        }
+        for(int i=0; i<7; i++){ // MOSTRAR TABELA
+            for(int j=0; j<7; j++){
+                if(j < 6){
+                    System.out.print("|" + tabela[i][j]);
+                }else{
+                    System.out.println("|" + tabela[i][j] + "|");
+                }
+            }
+        }
+        System.out.println("");
+        
+        // 13
+        System.out.println("👇 DÉCIMO TERCEIRO PASSO");
+        System.out.println("");
+        for(int i=0;i<7;i++){
+            for(int j=0;j<7;j++){       
+                if(i==2 && j==2){
+                    aux = tabela[i][j];
+                    tabela[i][j] = tabela[2][0];
+                    tabela[2][0] = aux;
+                    tabela[2][1] = aux;
+                }
+            }
+        }
+        for(int i=0; i<7; i++){ // MOSTRAR TABELA
+            for(int j=0; j<7; j++){
+                if(j < 6){
+                    System.out.print("|" + tabela[i][j]);
+                }else{
+                    System.out.println("|" + tabela[i][j] + "|");
+                }
+            }
+        }
+        System.out.println("");
+        
+        // 14
+        System.out.println("👇 DÉCIMO QUARTO PASSO");
+        System.out.println("");
+        for(int i=0;i<7;i++){
+            for(int j=0;j<7;j++){       
+                if(i==2 && j==1){
+                    aux = tabela[i][j];
+                    tabela[i][j] = tabela[2][3];
+                    tabela[2][3] = aux;
+                    tabela[2][2] = aux;
+                }
+            }
+        }
+        for(int i=0; i<7; i++){ // MOSTRAR TABELA
+            for(int j=0; j<7; j++){
+                if(j < 6){
+                    System.out.print("|" + tabela[i][j]);
+                }else{
+                    System.out.println("|" + tabela[i][j] + "|");
+                }
+            }
+        }
     }
 }
