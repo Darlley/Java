@@ -138,7 +138,9 @@ public class Jogo {
             }
         }
         System.out.println("");
-
+        System.out.println("RESTAM 33 PEÇAS");
+        System.out.println("");
+        
         //2
         System.out.println("👇 SEGUNDO PASSO");
         System.out.println("");
