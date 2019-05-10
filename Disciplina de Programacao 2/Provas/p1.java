@@ -1,24 +1,24 @@
 public class Pais {
 
-        //atributos
+        //ATRIBUTOR
         public String nome;
         public String capital;
         public double dimensao;
         public String fronteira[];
         public int qtdFronteiras;
         
-        //construtor
+        //CONSTRUTOR
         public Pais(){
             nome = Input.readString("Nome: ");
             capital = Input.readString("Capital: ");
             dimensao = Input.readDouble("Dimensao: ");
-            qtdFronteiras = Input.readInt("QtdFronteira: ");
+            qtdFronteiras = Input.readInt("Quantos países fazem fronteira com " + (nome) + ": ");
             fronteira = new String[qtdFronteiras];
             for(int i=0;i<qtdFronteiras;i++)
-               fronteira[i] = Input.readString("Nome Fronteira: ");
+               fronteira[i] = Input.readString("Nome país fronteira " + (i+1) + ": ");
         }
         
-        // B) metodos setters
+        //METODOS SETTERS
         public void setNome(String nome){
             this.nome = nome;
         }
@@ -31,7 +31,7 @@ public class Pais {
             this.dimensao = dimensao;
         }
         
-        // B) metodos getters
+        //METODOS GETTERS
         public String getNome(){
             return nome;
         }
@@ -44,24 +44,16 @@ public class Pais {
             return dimensao;
         }
         
-        public void adicionarFronteira(int qtd){
-            fronteira = new String[qtd];
-            for(int i=0;i<qtdFronteiras;i++){
-               fronteira[i] = Input.readString("NomeFronteira: ");
-            }
-        }
-        
         public void imprimeDados(){
-            System.out.println("\n**************");
-            System.out.println("Pais: "+nome);
+            System.out.println("\n=====" +nome);
             System.out.println("Capital: "+capital);
             System.out.println("Dimensao: "+dimensao);
             System.out.print("Fronteiras:");
-            for(int i=0;i<qtdFronteiras;i++){
+            for(int i=0;i<qtdFronteiras;i++)
                System.out.print(" "+fronteira[i]);
-            }
-            System.out.println("\n**************");
+            System.out.println("\n====================");
         }
+        
         // C) verifica igualdade entre paises
         public boolean verificaIgualdade(Pais p2){
             String nomeP1,nomeP2,capitalP1,capitalP2;
@@ -79,42 +71,106 @@ public class Pais {
         
         public static void main(String args[]){
             
-            Pais p1;
-            Pais p2;
             String str;
             boolean igualdade;
-            int escolha;
-            int newFronteira;
+            int opcao=0, qtdPaises, contPaises=0, i, opcaoPais, comparar1, comparar2;
+            
+            Pais vetorPaises[];
+            qtdPaises = Input.readInt("Digite o max. de paises: ");
+            vetorPaises = new Pais[qtdPaises];
+            
+            while(opcao !=3){
+                System.out.println("");
+                System.out.println("===== MENU =====");
+                opcao = Input.readInt("Escolha uma opcao:\n1- Inserir pais\n2- Imprimir dados\n3- Comparar países\n4- Sair\nOpcao: ");
+                System.out.println("");
+                
+                switch(opcao){
+                    
+                    //inserir novo pais
+                    case 1:
+                        if(contPaises<qtdPaises){
+                            System.out.println("===== INSERIR PAÍS =====");
+                            vetorPaises[contPaises] = new Pais();
+                            System.out.print("===== Pais (" + (vetorPaises[contPaises].nome) + ") inserido com sucesso!");
+                            System.out.println("");
+                            contPaises++;
+                        }else{
+                            System.out.println("Num. Max. Paises ja cadastrados!\n");
+                        }
+                    break;
+                
+                    //imprimir dados de um pais
+                    case 2:
+                        
+                        System.out.println("===== PAÍSES CADASTRADOS =====");
+                        for(i=0;i<contPaises;i++){
+                            System.out.println((i+1)+" - "+vetorPaises[i].getNome());
+                        }
+                        opcaoPais = Input.readInt("Escolha o pais: ");
+                        vetorPaises[opcaoPais-1].imprimeDados();
+                            
+                    break;
+                    
+                    case 3:
+                        System.out.println("===== COMPARAR PAÍSES =====");
+                        for(i=0;i<contPaises;i++){
+                            System.out.println((i+1)+" - "+vetorPaises[i].getNome());
+                        }
+                        comparar1 = Input.readInt("Escolha o primeiro país: ");
+                        comparar2 = Input.readInt("Escolha o segundo país: ");
+                        comparar1--;
+                        comparar2--;
+                        System.out.println("");
+                        
+                        igualdade = vetorPaises[comparar1].verificaIgualdade(vetorPaises[comparar2]);
+                        if(igualdade == true){
+                            System.out.println("O países são Iguais!!");
+                            vetorPaises[comparar1].imprimeDados();
+                        }else{
+                            System.out.println("Os países são diferentes!!");
+                            vetorPaises[comparar1].imprimeDados();
+                            vetorPaises[comparar2].imprimeDados();
+                        }
+                    break;
+                    //sair
+                    case 5:
+                        System.out.println("Saindo do programa!");
+                    break;
+
+                }//fim switch case
+            }//fim while
             
             
-            p1 = new Pais();
-            System.out.println("");
-            p2 = new Pais();
-            
-            // MENU
-            System.out.println("Informe uma operação: ");
-            escolha = Input.readInt("1: Verificar igualdade\n2: Adicionar froneira\n3: Mostrar fronteiras\n4: Maior país\n5: ");
             
             
-            switch(escolha){
-                case 1: // C
-                    igualdade = p1.verificaIgualdade(p2);
-                    if(igualdade == true){
-                        System.out.println("O países são Iguais!!");
-                        p1.imprimeDados();
-                    }else{
-                        System.out.println("Os países são diferentes!!");
-                        p1.imprimeDados();
-                        p2.imprimeDados();
-                    }
-                case 2: 
-                    newFronteira = Input.readInt("Informe a quantidade de fronteiras para " + p1.getNome());
-                    p1.adicionarFronteira(newFronteira);
-                    p1.imprimeDados();
-                    System.out.println("");
-                    newFronteira = Input.readInt("Informe a quantidade de fronteiras para " + p1.getNome());
-                    p2.adicionarFronteira(newFronteira);
-                    p2.imprimeDados();
-            }          
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /*str = p.getNome();
+            System.out.println("Retorno: "+str);
+            
+            p.setNome("Luis");
+            str = p.getNome();
+            System.out.println("Retorno: "+str);*/
+            /*
+            igualdade = p1.verificaIgualdade(p2);
+            if(igualdade == true)
+                System.out.println("Iguais!");
+            else   
+                System.out.println("Diferentes!!");*/
+            
+            //p1.imprimeDados();
         }
 }
