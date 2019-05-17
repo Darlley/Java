@@ -1,43 +1,20 @@
 public class Jogo {
-    /*public void restaUm(int u, int[][] tabela){
-        int aux;
-        //1
-        for(int i=0;i<36;i++){
-            for(int j=0;j<36;j++){       
-                if(i==5 && j==3){
-                    aux = tabela[3][3];
-                    tabela[3][3] = tabela[5][3];
-                    tabela[5][3] = aux;
-                }
-            }
-        }
-        //2
-        for(int i=0;i<36;i++){
-            for(int j=0;j<36;j++){       
-                if(i==4 && j==3){
-                    aux = tabela[4][3];
-                    tabela[4][1] = tabela[4][3];
-                    tabela[4][3] = aux;
-                }
-            }
-        }
-    }*/
-    public static void main(String[] args) {
-        String aux; //temporario
-        // DECLARAÇÕES
-        String tabela[][];
-        tabela = new String[7][7];
-        int numQTD;
-        String center;
-        
+    public int qtdFinal;
+    public int centralizar;
+    public int total = 32;
+    String tabela[][];
+    
+    // C O N S T R U T O R
+    public Jogo(){
         // ENTRADA DE DADOS
-        //numQTD = Input.readInt("Número final de peças: ");
-        //center = Input.readString("A ultima peça deve estar [1]-centralizada ou [2]-não centralizada? ");
-        
-        /* ******************************
-                    C R I A R
-                    T A B E L A
-           ****************************** */
+        qtdFinal = Input.readInt("Número final de peças: ");
+        centralizar = Input.readInt("A ultima peça deve estar [1]-centralizada ou [2]-não centralizada? ");
+        System.out.println("");
+    }
+    
+    // C R I A R  T A B U L E I R O  D O  J O G O
+    public void criarTabela(){
+        tabela = new String[7][7];
         
         // COLUNA 1
         tabela[0][0] = "-";
@@ -102,8 +79,12 @@ public class Jogo {
         tabela[6][5] = "-";
         tabela[6][6] = "-";
         
-        
-        // MOSTRAR TABELA
+        mostrarTabela();
+    }
+    
+    // M O S T R A R  T A B E L A  D O  J O G O
+    public void mostrarTabela(){
+
         for(int i=0; i<7; i++){
             for(int j=0; j<7; j++){
                 if(j < 6){
@@ -114,343 +95,58 @@ public class Jogo {
             }
         }
         System.out.println("");
+    }
+    
+    // L Ó G I C A  D O  J O G O 
+    public void jogarPartida(){
+        String aux;
 
-        // 1
-        System.out.println("👇 PRIMEIRO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==5 && j==3){
-                    aux = tabela[3][3];
-                    tabela[3][3] = tabela[5][3];
-                    tabela[4][3] = aux;
-                    tabela[5][3] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        System.out.println("RESTAM 33 PEÇAS");
-        System.out.println("");
-        
-        //2
-        System.out.println("👇 SEGUNDO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==4 && j==3){
-                    aux = tabela[4][3];
-                    tabela[4][3] = tabela[4][1];
-                    tabela[4][1] = aux;
-                    tabela[4][2] = aux;
+        while(qtdFinal != total){
+            
+            for(int i=0;i<7;i++){
+                for(int j=0;j<7;j++){       
+                    
+                    /*if(" ".equals(tabela[i][j])){
 
+                        aux = tabela[i][j];
+                        tabela[i][j] = tabela[i--][j];
+                        tabela[i-1][j] = aux;
+                        tabela[i-2][j] = aux;
+                        
+                    }*/
+                    
+                    total--;
+                    mostrarTabela();
                 }
             }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
+            
+        } // Finaliza o jogo quando sobrar a quantidade de peas informada pelo jogador
         
-        // 3
-        System.out.println("👇 TERCEIRO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==5 && j==3){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[3][3];
-                    tabela[4][3] = aux;
-                    tabela[3][3] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
+    }
+    
+    public static void main(String[] args) {
+        int escolha = 1;
         
-        // 4
-        System.out.println("👇 QUARTO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==4 && j==2){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[6][2];
-                    tabela[5][2] = aux;
-                    tabela[6][2] = aux;
-                }
+        while(escolha == 1){
+            
+            System.out.println("======== MENU ========");
+            escolha = Input.readInt("1- Jogar\n2- Sair\nEscolha: ");
+            
+            switch(escolha){
+                case 1: 
+                    Jogo partida;
+                    partida = new Jogo();
+                    
+                    System.out.println("BEM VINNDO❗❗❗\n👇 JOGO INICIALIZADO 👇\n\n");
+                    
+                    partida.criarTabela();
+                    partida.jogarPartida();
+                    
+                    break;
+                case 2:
+                    System.out.println("Saindo...");
             }
         }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 5
-        System.out.println("👇 QUINTO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==6 && j==2){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[6][4];
-                    tabela[6][3] = aux;
-                    tabela[6][4] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 6
-        System.out.println("👇 SEXTO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==5 && j==2){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[3][2];
-                    tabela[3][2] = aux;
-                    tabela[4][2] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 7
-        System.out.println("👇 SÉTIMO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==4 && j==2){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[6][2];
-                    tabela[6][2] = aux;
-                    tabela[5][2] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 8
-        System.out.println("👇 OITAVO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==6 && j==4){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[4][4];
-                    tabela[4][4] = aux;
-                    tabela[5][4] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 9
-        System.out.println("👇 NONO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==4 && j==4){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[4][6];
-                    tabela[4][6] = aux;
-                    tabela[4][5] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 10
-        System.out.println("👇 DÉCIMO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==5 && j==4){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[3][4];
-                    tabela[3][4] = aux;
-                    tabela[4][4] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 11
-        System.out.println("👇 DÉCIMO PRIMEIRO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==6 && j==4){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[4][4];
-                    tabela[4][4] = aux;
-                    tabela[5][4] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 12
-        System.out.println("👇 DÉCIMO SEGUNDO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==3 && j==2){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[1][2];
-                    tabela[2][2] = aux;
-                    tabela[1][2] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 13
-        System.out.println("👇 DÉCIMO TERCEIRO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==2 && j==2){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[2][0];
-                    tabela[2][0] = aux;
-                    tabela[2][1] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
-        System.out.println("");
-        
-        // 14
-        System.out.println("👇 DÉCIMO QUARTO PASSO");
-        System.out.println("");
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){       
-                if(i==2 && j==1){
-                    aux = tabela[i][j];
-                    tabela[i][j] = tabela[2][3];
-                    tabela[2][3] = aux;
-                    tabela[2][2] = aux;
-                }
-            }
-        }
-        for(int i=0; i<7; i++){ // MOSTRAR TABELA
-            for(int j=0; j<7; j++){
-                if(j < 6){
-                    System.out.print("|" + tabela[i][j]);
-                }else{
-                    System.out.println("|" + tabela[i][j] + "|");
-                }
-            }
-        }
+
     }
 }
