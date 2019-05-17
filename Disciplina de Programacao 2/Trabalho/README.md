@@ -2,6 +2,8 @@
 # Tecnologia em Análise e Desenvolvimento de Sistemas
 # Laboratório de Programação II
 
+![Programação TADS](https://yt3.ggpht.com/a-/ACSszfEfrSyJHu5xU3drsoyyS6-fT3FGjEGuXRpD9g=s900-mo-c-c0xffffffff-rj-k-no)
+
 ## Descrição 
 Implementação do famoso jogo Resta Um em uma linguagem de programação utilizando conhecimentos de estrutura de dados.
 Sobre o Jogo 
