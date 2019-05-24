@@ -101,258 +101,38 @@ public class Jogo {
     public void jogarPartida(){
         String aux;
         
-        if(qtdFinal == 1){
-        //while(qtdFinal != total){
-            
-            /*for(int i=0;i<7;i++){
-                for(int j=0;j<7;j++){       
-                    if(" ".equals(tabela[i][j])){
-                        aux = tabela[i][j];
-                        tabela[i][j] = tabela[i--][j];
-                        tabela[i-1][j] = aux;
-                        tabela[i-2][j] = aux;
-                    }
-                    total--;
+        for(int i=0;i<7;i++){	
+            for(int j=0;j<7;j++){
+                while(" ".equals(tabela[i][j])){
+                    if("•".equals(tabela[i-2][j]) && "•".equals(tabela[i-1][j])){
+                        tabela[i-2][j] = " ";
+                        tabela[i-1][j] = " ";
+                        mostrarTabela();
+                    } // CIMA
+                    
+                    if("•".equals(tabela[i+2][j]) && "•".equals(tabela[i+1][j])){
+                        tabela[i+2][j] = " ";
+                        tabela[i+1][j] = " ";
+                        mostrarTabela();
+                    } // BAIXO
+                    
+                    if("•".equals(tabela[i][j-1]) && "•".equals(tabela[i][j-2])){
+                        tabela[i][j-2] = " ";
+                        tabela[i][j-1] = " ";
+                        mostrarTabela();
+                    } // ESQUERDA
+                    
+                    if("•".equals(tabela[i][j+1]) && "•".equals(tabela[i][j+2])){
+                        tabela[i][j+1] = " ";
+                        tabela[i][j+2] = " ";
+                        mostrarTabela();
+                    } // DIREITA
+                    
                     mostrarTabela();
                 }
-                if(" ".equals(tabela[i][i])){
-                        aux = tabela[i][i];
-                        tabela[i][i] = tabela[i][i++];
-                        tabela[i][i+1] = aux;
-                        tabela[i][i+2] = aux;
-                }
-                total--;
-             */
-            
-                
-            // 1
-                System.out.println("👇 PRIMEIRO PASSO\n");
-                for(int i=0;i<7;i++){
-                    for(int j=0;j<7;j++){
-                        if(i==5 && j==3){
-                        aux = tabela[3][3];	
-                            tabela[3][3] = tabela[5][3];	
-                            tabela[4][3] = aux;	
-                            tabela[5][3] = aux;	
-                        }	
-                    }	
-                }	
-                mostrarTabela();	
-                System.out.println("RESTAM 35 PEÇAS");	
-                
-                //2	
-                System.out.println("\n👇 SEGUNDO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 34 PEÇAS");	
-
-                //3	
-                System.out.println("\n👇 TERCEIRO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==5 && j==3){	
-                            aux = tabela[i][j];	
-                            tabela[i][j] = tabela[3][3];	
-                            tabela[4][3] = aux;	
-                            tabela[3][3] = aux;	
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 33 PEÇAS");	
-
-                //4
-                System.out.println("\n👇 QUARTO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==2){	
-                            aux = tabela[i][j];	
-                            tabela[i][j] = tabela[6][2];	
-                            tabela[5][2] = aux;	
-                            tabela[6][2] = aux;	
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 32 PEÇAS");
-                
-                //5
-                System.out.println("\n👇 QUINTO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==6 && j==2){	
-                            aux = tabela[i][j];	
-                            tabela[i][j] = tabela[6][4];	
-                            tabela[6][3] = aux;	
-                            tabela[6][4] = aux;	
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 31 PEÇAS");
-                
-                //6
-                System.out.println("\n👇 SEXTO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==5 && j==2){	
-                            aux = tabela[i][j];	
-                            tabela[i][j] = tabela[3][2];	
-                            tabela[3][2] = aux;	
-                            tabela[4][2] = aux;	
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 30 PEÇAS");
-                
-                //7
-                System.out.println("\n👇 SÉTIMO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==2){	
-                            aux = tabela[i][j];	
-                            tabela[i][j] = tabela[6][2];	
-                            tabela[6][2] = aux;	
-                            tabela[5][2] = aux;	
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 29 PEÇAS");
-                
-                //8
-                System.out.println("\n👇 OITAVO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==6 && j==4){	
-                            aux = tabela[i][j];	
-                            tabela[i][j] = tabela[4][4];	
-                            tabela[4][4] = aux;	
-                            tabela[5][4] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 28 PEÇAS");
-                /*
-                //9
-                System.out.println("\n👇 NONO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 27 PEÇAS");
-                
-                //10
-                System.out.println("\n👇 DÉCIMO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 26 PEÇAS");
-                
-                //11
-                System.out.println("\n👇 DÉCIMO PRIMEIRO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 25 PEÇAS");
-                
-                //12
-                System.out.println("\n👇 DÉCIMO SEGUNDO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 24 PEÇAS");
-                
-                //13
-                System.out.println("\n👇 DÉCIMO TERCEIRO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 23 PEÇAS");
-                
-                //14
-                System.out.println("\n👇 DÉCIMO QUARTO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 22 PEÇAS");
-                
-                //15
-                System.out.println("\n👇 DÉCIMO QUINTO PASSO\n");	
-                for(int i=0;i<7;i++){	
-                    for(int j=0;j<7;j++){       	
-                        if(i==4 && j==3){	
-                            aux = tabela[4][3];	
-                            tabela[4][3] = tabela[4][1];	
-                            tabela[4][1] = aux;	
-                            tabela[4][2] = aux;
-                        }
-                    }
-                }
-                mostrarTabela();
-                System.out.println("RESTAM 21 PEÇAS");
-                */
-               
             }
-        } //Continuar se a quantidade total de peças for diferente do de preças final (informada pelo usuario no menu)
+        }
+    } 
     
     
     public static void main(String[] args) {
@@ -383,5 +163,7 @@ public class Jogo {
                     System.out.println("Saindo...");
             }
         }
+        
+        
     }
 }
