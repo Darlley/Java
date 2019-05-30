@@ -21,7 +21,7 @@ f. um método que possa receber como parâmetro o nome de uma
 determinada função e posteriormente imprimir o nome de todas as pessoas
 que exercem essa função. */
 
-public class funcionarios {
+public class Funcionario {
 
     // A T R I B U T O S
     public int matricula; 
@@ -31,7 +31,7 @@ public class funcionarios {
     public String função;
     
     // construtor
-    public funcionarios(){      
+    public Funcionario(){      
         this.matricula = Input.readInt("Matricula: ");
         this.nome = Input.readString("Nome: ");
         this.departamento = Input.readInt("Departamento: ");
@@ -63,58 +63,103 @@ public class funcionarios {
         return função;
     }
     
+    public void folhaPagamento(int qtd){
+        
+    }
+    
     // M E T O D O  P R I N C I P A L
     public static void main(String[] args) {
-        int opacao, qtd, cont = 0;
+        int opacao, qtd, dpt, cont = 0, continuar = 1;
+        String nome, func;
 
-        funcionarios numFuncionarios[];
-        qtd = Input.readInt("Informa a quantidade: ");
-        numFuncionarios = new funcionarios[qtd];
-        numFuncionarios[0] = new funcionarios();
-  
-        System.out.println("Inserir funcionário? ");
-        opacao = Input.readInt();
-        switch(opacao){
-            case 1:
-                if(cont < qtd){
-                    numFuncionarios[cont] = new funcionarios();
-                    cont++;
-                }else{
-                    System.out.println("!");
-                }
-                break;
-            case 2: 
-                if(cont < qtd){
-                    numFuncionarios[cont].imprimir();
-                }else{
-                    for(int i=0; i<=qtd; i++){
-                        numFuncionarios[i].imprimir();
+        Funcionario numFuncionarios[];
+        qtd = Input.readInt("Informa a quantidade de funcionarios: ");
+        numFuncionarios = new Funcionario[qtd];
+        
+        while(continuar == 1){
+            System.out.println("\n= = = = = = = = = MENU = = = = = = = = =");
+            System.out.println("Digite\n[1] para inserir funcionário;\n[2] Para Pesquisar salário com nome;\n[3] para calcular valor total da folha de pagamento;\n[4] Para saber maior salário;\n[5] Para pesquisar funcionários pelo departamento;\n[6] Para pesquisar funcionarios pelas funções\n[7] Para imprimir dados dos funcionários;\n[ENTER] Para sair;\n= = = = = = = = = = = = = = = = = =");
+            opacao = Input.readInt();
+        
+            switch(opacao){
+                case 1: // A) ADICIONAR FUNCIONÁRIO
+                    if(cont < qtd){
+                        numFuncionarios[cont] = new Funcionario();
+                        cont++;
+                    }else{
+                        System.out.println("Esgotado");
                     }
-                }
-            case 3:
-                double totalFolhaSalarial = 0;
-                for(int i=0;i<=cont;i++){
-                    totalFolhaSalarial = totalFolhaSalarial + numFuncionarios[i].getSalario();
-                }
-                System.out.println(totalFolhaSalarial);
-                break;
-            case 4: // M A I O R  S A L A R I O
-                if(cont > 0){
-                    double maior = numFuncionarios[0].getSalario();
-                    String nomeMaior = numFuncionarios[0].getNome();
+                    break;
+                case 2: // B) PESQUISAR SALÁRIO (NOME)
+                    if(cont > 0){
+                        nome = Input.readString("Informe um nome: ");
+                        for(int i=0;i<=cont;i++){
+                            if(numFuncionarios[i].nome.equals(nome)){
+                                System.out.println("Salário: RS " + numFuncionarios[i].getSalario());
+                            }else{
+                                System.out.println("Funcionário não encontrado!");
+                            }
+                            break;
+                        }
+                    }else{
+                        System.out.println("Adicione mais funcionário!");
+                    }
+                    break;
+                case 3: // C) VALOR TOTAL DA FOLHA DE PAGAMENTO
+                    double totalFolhaSalarial = 0;
+                    continuar = cont;
+                    while(cont > 0){
+                        totalFolhaSalarial += totalFolhaSalarial + numFuncionarios[cont].getSalario();
+                        cont--;
+                    }
+                    cont = continuar;
+                    continuar = 1;
+                    System.out.println(totalFolhaSalarial);
+                    break;
+                case 4: // D) FUNCIONÁRIO COM MAIOR SALÁRIO
+                    if(cont > 0){
+                        double maior = numFuncionarios[0].getSalario();
+                        String nomeMaior = numFuncionarios[0].getNome();
+                        for(int i=1;i<=cont;i++){
+                            if(maior < numFuncionarios[i].getSalario()){
+                                maior = numFuncionarios[i].getSalario();
+                                nomeMaior = numFuncionarios[i].getNome();
+                            }
+                        }
+                        System.out.println("Maior salário é " + nomeMaior + " com R$: " + maior);
+                    }else{
+                        System.out.println("Inserir funcionário!");
+                    }
+                    break;
+                case 5: // E) PESQUISAR FUNCIONÁRIO (APARTAMENTO)
+                    dpt = Input.readInt("Informe o número do departamento: ");
                     for(int i=1;i<=cont;i++){
-                        if(maior < numFuncionarios[i].getSalario()){
-                            maior = numFuncionarios[i].getSalario();
-                            nomeMaior = numFuncionarios[i].getNome();
+                        if(numFuncionarios[i].departamento == dpt){
+                            System.out.println(numFuncionarios[i].getNome());
                         }
                     }
-                    System.out.println("Maior salário é " + nomeMaior + " com R$: " + maior);
-                }else{
-                    System.out.println("Inserir funcionário!");
-                }
-                break;
-            default:
-                System.out.println("Saindo...");
+                    break;
+                case 6: // E) PESQUISAR FUNCIONÁRIO (FUNÇÃO)
+                    func = Input.readString("Informe o número do departamento: ");
+                    for(int i=1;i<=cont;i++){
+                        if(numFuncionarios[i].função == func){
+                            System.out.println(numFuncionarios[i].getNome());
+                        }
+                    }
+                    break;
+                case 7:
+                    // IMPRIMIR DADOS
+                    if(cont < qtd){
+                        numFuncionarios[cont].imprimir();
+                    }else{
+                        for(int i=0; i<=qtd; i++){
+                            numFuncionarios[i].imprimir();
+                        }
+                    }
+                    break;
+                default:
+                    System.out.println("Saindo...");
+            }
         }
     }
 }
