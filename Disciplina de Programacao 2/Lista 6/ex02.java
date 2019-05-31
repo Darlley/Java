@@ -34,7 +34,7 @@ public class UCDB {
 
         for(int i=0; i<=30; i++){
             for(int j=0;j<=30; j++){
-                numCursos[i][j].nomeCurso = Input.readString("");
+                numCursos[i][j].nomeCurso = Input.readString("");  // E R R O R
                 areaCurso = Input.readString("");
                 dataInicioLetivo = Input.readString("");
                 numVagas = Input.readInt("");
