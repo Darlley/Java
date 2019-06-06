@@ -5,11 +5,13 @@ public class Jogo {
     String tabela[][];
     
     // C O N S T R U T O R
-    public Jogo(){
-        // ENTRADA DE DADOS
-        qtdFinal = Input.readInt("Número final de peças: ");
-        centralizar = Input.readInt("A ultima peça deve estar [1]-centralizada ou [2]-não centralizada? ");
-        System.out.println("");
+    public Jogo(int escolha){
+        if(escolha == 1){
+            // ENTRADA DE DADOS
+            qtdFinal = Input.readInt("Número final de peças: ");
+            centralizar = Input.readInt("A ultima peça deve estar [1]-centralizada ou [2]-não centralizada? ");
+            System.out.println("");
+        }
     }
     
     // C R I A R  T A B U L E I R O  D O  J O G O
@@ -7633,7 +7635,7 @@ public class Jogo {
             switch(escolha){
                 case 1: 
                     Jogo partida;
-                    partida = new Jogo();
+                    partida = new Jogo(escolha);
                     
                     System.out.println("BEM VINNDO❗❗❗\n👇 JOGO INICIALIZADO 👇\n\n");
                     
