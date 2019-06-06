@@ -19,38 +19,32 @@ Para finalizar construa um método para retornar o curso mais antigo de todos
 os cursos cadastrados.
 */
 
-public class UCDB {
-    
-    public String endereço;
-    public String numCursos[][] = new String[4][30];
-    public String numProfessores[][] = new String[6][100];
-    public int anoFundação;
-    
-    // C O N S T R U T O R
-    public UCDB(){}
-    public void criarCurso(){
-        String nomeCurso, areaCurso, dataInicioLetivo; //saúde, exatas, humanas
-        int numVagas;
+public class Curso { 
+  String nomeCurso = nome,
+             areaCurso,
+             dataInicioLetivo;
+  int       numVagas 
+} 
 
-        for(int i=0; i<=30; i++){
-            for(int j=0;j<=30; j++){
-                numCursos[i][j].nomeCurso = Input.readString("");  // E R R O R
-                areaCurso = Input.readString("");
-                dataInicioLetivo = Input.readString("");
-                numVagas = Input.readInt("");
-            }
-        }        
-    }
-    public void cadastrarProfessor(){
-        String nome, endereco, telefone;
-        int registro, idade;
-        double salario;
-        
-        for(int i=0; i<=100; i++){
-        
-        }
-    }
-    
+
+public class Professor { 
+  String nome,
+              endereco,
+              telefone;
+  int        registro,
+              idade; 
+  double salario; 
+}
+
+
+public class UCDB { 
+  String endereço;
+     numCursos[] = new String[30];
+     numProfessores[] = new String[100];
+   int anoFundação;
+
+   public UCDB(){
+   }
     /*
     public int getMatricula(){
         return matricula;
@@ -85,6 +79,9 @@ public class UCDB {
     }
     
     public static void main(String[] args) {
+        
+        
+        
         int qtdCursos, qtdProfessores, continuar = 1, opcao;
         UCDB cursos, professores;
         cursos = new UCDB();
