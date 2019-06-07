@@ -1,160 +1,160 @@
-/* Escreva uma classe “Funcionário” com os atributos matricula (int), nome
-(String), departamento (int), salário (double) e função (String). Adicione na
-classe um construtor que receba todos os parâmetros para inicializar os dados
-de um funcionário.
+public class UCDB { 
+    String endereço;
+    int anoFundação;
+    Curso numCursos[];
+    Professor numProfessores[];
+    
 
-Escreva uma main que tenha vetor da classe “Funcionário” e uma variável
-inteira para ser usada como índice do vetor. O número de funcionários de uma
-empresa para instanciar o vetor deve ser informado pelo usuário. Acrescente
-os seguintes métodos à classe:
+    public UCDB(){
+        endereço = Input.readString("Informe o endereço da universidade: ");
+        anoFundação = Input.readInt("Informe o ano da fundação da universidade: ");
+        numCursos = new Curso[30];
+        numProfessores = new Professor[100];
+    }
+    
+    // MÉTODOS CURSO
+    public void addCurso(int cont){
+	numCursos[cont] = new Curso();	
+    }
+    public void infoCursos(int contC){
+	for(int i=0;i<contC;i++){
+            numCursos[i].imprime();
+        }
+    }
+    public void consultarCurso(int contC){
+        String nome;
+        int cont = 0;
+        nome = Input.readString("Informe a área do curso: ");
+        for(int i=0;i<=contC;i++){
+            if(numCursos[i].areaCurso.equals(nome)){
+                System.out.println("Cursos encontrados!\n" + i +
+                                   ": "+ numCursos[i].nomeCurso);
+                cont++;
+            }
+            if(i == contC && cont == 0){
+                System.out.println("Cursos não encontrado!");
+            }
+            
+        }
+    }
+    
+    // MÉTODOS PROFESSOR
+    public void addProfessor(int contP){
+        numProfessores[contP] = new Professor();
+    }
+    public void infoProfessor(int contP){
+	for(int i=0; i<contP; i++){
+            numProfessores[i].imprime();
+        }
+    }
+    public void consultarProfessorS(int contP){
+        Double salario;
+        int cont = 0;
+        salario = Input.readDouble("Informe o salário para pesquisa: ");
+        for(int i=0;i<=contP;i++){
 
-a. um método para adicionar funcionários no vetor definido na classe;
-b. um método que possa imprimir a folha de pagamento informando o nome
-dos funcionários e os seus respectivos salários;
-c. um método que possa retornar o valor total da folha de pagamento;
-d. um método que possa retornar o nome do funcionário que recebe o maior
-salário;
-e. um método que possa receber como parâmetro o número de um
-determinado departamento e mostrar o nome e o cargo de todos os
-funcionários daquele departamento;
-f. um método que possa receber como parâmetro o nome de uma
-determinada função e posteriormente imprimir o nome de todas as pessoas
-que exercem essa função. */
+            if(numProfessores[i].salario == salario){
+                System.out.println("Professores encontrados!\n" + i +
+                                   ": "+ numProfessores[i].nome);
+                cont++;
+            }
+            if(i == contP && cont == 0){
+                System.out.println("Professores não encontrados!");
+            }
+            
+        }
+    }
+    public void consultarProfessorI(int contP){
+        Double idade;
+        int cont = 0;
+        idade = Input.readDouble("Informe a idade para pesquisa: ");
+        for(int i=0;i<=contP;i++){
 
-public class Funcionario {
-
-    // A T R I B U T O S
-    public int matricula; 
-    public String nome;
-    public int departamento;
-    public double salário;
-    public String função;
-    
-    // construtor
-    public Funcionario(){      
-        this.matricula = Input.readInt("Matricula: ");
-        this.nome = Input.readString("Nome: ");
-        this.departamento = Input.readInt("Departamento: ");
-        this.salário = Input.readDouble("Salário: ");
-        this.função = Input.readString("Função: ");
+            if(numProfessores[i].idade == idade){
+                System.out.println("Professores encontrados!\n" + i +
+                                   ": "+ numProfessores[i].nome);
+                cont++;
+            }
+            if(i == contP && cont == 0){
+                System.out.println("Professores não encontrados!");
+            }
+            
+        }
+    }
+    public void calculaProfessor(int contP){
+        double soma = 0;
+        for(int i=0;i<=contP;i++){
+            soma += numProfessores[i].salario; 
+        }
+        System.out.println("Gastos total com professores:\nR$" + soma);
     }
     
-    public void imprimir(){      
-        System.out.println(matricula);
-        System.out.println(nome);
-        System.out.println(departamento);
-        System.out.println(salário);
-        System.out.println(função);
-    }
-    
-    public int getMatricula(){
-        return matricula;
-    }
-    public String getNome(){
-        return nome;
-    }
-    public int getDepartamento(){
-        return departamento;
-    }
-    public double getSalario(){
-        return salário;
-    }
-    public String getFuncao(){
-        return função;
-    }
-    
-    public void folhaPagamento(int qtd){
-        
-    }
-    
-    // M E T O D O  P R I N C I P A L
     public static void main(String[] args) {
-        int opacao, qtd, dpt, cont = 0, continuar = 1;
-        String nome, func;
-
-        Funcionario numFuncionarios[];
-        qtd = Input.readInt("Informa a quantidade de funcionarios: ");
-        numFuncionarios = new Funcionario[qtd];
+        int continuar = 1, contC = 1, contP = 1, opcao;
+        UCDB adm = new UCDB();
         
         while(continuar == 1){
             System.out.println("\n= = = = = = = = = MENU = = = = = = = = =");
             System.out.println("Digite\n[1] para inserir funcionário;\n[2] Para Pesquisar salário com nome;\n[3] para calcular valor total da folha de pagamento;\n[4] Para saber maior salário;\n[5] Para pesquisar funcionários pelo departamento;\n[6] Para pesquisar funcionarios pelas funções\n[7] Para imprimir dados dos funcionários;\n[ENTER] Para sair;\n= = = = = = = = = = = = = = = = = =");
-            opacao = Input.readInt();
+            opcao = Input.readInt();
         
-            switch(opacao){
-                case 1: // A) ADICIONAR FUNCIONÁRIO
-                    if(cont < qtd){
-                        numFuncionarios[cont] = new Funcionario();
-                        cont++;
+            switch(opcao){
+                case 1: //cadastrar cursos
+                    if(contC<=0){
+                        adm.addCurso(contC);
+                        contC++;
                     }else{
-                        System.out.println("Esgotado");
+                        System.out.println("Esgotado!");
                     }
                     break;
-                case 2: // B) PESQUISAR SALÁRIO (NOME)
-                    if(cont > 0){
-                        nome = Input.readString("Informe um nome: ");
-                        for(int i=0;i<=cont;i++){
-                            if(numFuncionarios[i].nome.equals(nome)){
-                                System.out.println("Salário: RS " + numFuncionarios[i].getSalario());
-                            }else{
-                                System.out.println("Funcionário não encontrado!");
-                            }
-                            break;
-                        }
+                case 2: //cadastrar professores
+                    if(contP<=0){
+                        adm.addProfessor(contP);
+                        contC++;
                     }else{
-                        System.out.println("Adicione mais funcionário!");
+                        System.out.println("Esgotado!");
                     }
                     break;
-                case 3: // C) VALOR TOTAL DA FOLHA DE PAGAMENTO
-                    double totalFolhaSalarial = 0;
-                    continuar = cont;
-                    while(cont > 0){
-                        totalFolhaSalarial += totalFolhaSalarial + numFuncionarios[cont].getSalario();
-                        cont--;
-                    }
-                    cont = continuar;
-                    continuar = 1;
-                    System.out.println(totalFolhaSalarial);
-                    break;
-                case 4: // D) FUNCIONÁRIO COM MAIOR SALÁRIO
-                    if(cont > 0){
-                        double maior = numFuncionarios[0].getSalario();
-                        String nomeMaior = numFuncionarios[0].getNome();
-                        for(int i=1;i<=cont;i++){
-                            if(maior < numFuncionarios[i].getSalario()){
-                                maior = numFuncionarios[i].getSalario();
-                                nomeMaior = numFuncionarios[i].getNome();
-                            }
-                        }
-                        System.out.println("Maior salário é " + nomeMaior + " com R$: " + maior);
+                case 3: //consultar cursos pela área
+                    if(contC > 0){
+                        adm.consultarCurso(contC);
                     }else{
-                        System.out.println("Inserir funcionário!");
+                        System.out.println("Adicione mais cursos!");
                     }
                     break;
-                case 5: // E) PESQUISAR FUNCIONÁRIO (APARTAMENTO)
-                    dpt = Input.readInt("Informe o número do departamento: ");
-                    for(int i=1;i<=cont;i++){
-                        if(numFuncionarios[i].departamento == dpt){
-                            System.out.println(numFuncionarios[i].getNome());
-                        }
-                    }
-                    break;
-                case 6: // E) PESQUISAR FUNCIONÁRIO (FUNÇÃO)
-                    func = Input.readString("Informe o número do departamento: ");
-                    for(int i=1;i<=cont;i++){
-                        if(numFuncionarios[i].função == func){
-                            System.out.println(numFuncionarios[i].getNome());
-                        }
-                    }
-                    break;
-                case 7:
-                    // IMPRIMIR DADOS
-                    if(cont < qtd){
-                        numFuncionarios[cont].imprimir();
+                case 4: //consultar professores por salário
+                    if(contP > 0){
+                        adm.consultarProfessorS(contP);
                     }else{
-                        for(int i=0; i<=qtd; i++){
-                            numFuncionarios[i].imprimir();
-                        }
+                        System.out.println("Adicione professores!");
+                    }
+                    break;
+                case 5: //consultar professores por idade
+                    if(contP > 0){
+                        adm.consultarProfessorI(contP);
+                    }else{
+                        System.out.println("Adicione professores!");
+                    }
+                    break;
+                case 6: //calcular gasto mensal com professores
+                    if(contP > 0){
+                        adm.calculaProfessor(contP);
+                    }else{
+                        System.out.println("Adicione professores!");
+                    }
+                    break;
+                case 7: //mostrar cursos
+                    if(contC>0){
+                        adm.infoCursos(contC);
+                    }else{
+                        System.out.println("Adicione cursos!");
+                    }
+                    break;
+                case 8: //mostrar professores
+                    if(contP>0){
+                        adm.infoProfessor(contP);
+                    }else{
+                        System.out.println("Adicione professores!");
                     }
                     break;
                 default:
