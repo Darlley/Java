@@ -55,17 +55,17 @@ public class UCDB {
         Double salario;
         int cont = 0;
         salario = Input.readDouble("Informe o salário para pesquisa: ");
-        for(int i=0;i<=contP;i++){
+        for(int i=0;i<contP;i++){
 
             if(numProfessores[i].salario == salario){
                 System.out.println("Professores encontrados!\n" + i +
                                    ": "+ numProfessores[i].nome);
-                cont++;
+                
             }
             if(i == contP && cont == 0){
                 System.out.println("Professores não encontrados!");
             }
-            
+            cont++;
         }
         
     }
@@ -73,17 +73,17 @@ public class UCDB {
         Double idade;
         int cont = 0;
         idade = Input.readDouble("Informe a idade para pesquisa: ");
-        for(int i=0;i<=contP;i++){
+        for(int i=0;i<contP;i++){
 
             if(numProfessores[i].idade == idade){
                 System.out.println("Professores encontrados!\n" + i +
                                    ": "+ numProfessores[i].nome);
-                cont++;
+                
             }
             if(i == contP && cont == 0){
                 System.out.println("Professores não encontrados!");
             }
-            
+            cont++;
         }
     }
     public void calculaProfessor(int contP){
@@ -115,7 +115,7 @@ public class UCDB {
                 case 2: //cadastrar professores
                     if(contP<=0){
                         adm.addProfessor(contP);
-                        contC++;
+                        contP++;
                     }else{
                         System.out.println("Esgotado!");
                     }
@@ -158,7 +158,7 @@ public class UCDB {
                     break;
                 case 8: //mostrar professores
                     //if(contP == 0){
-                        System.out.println("Adicione professores!");
+                       
                     //}else{
                         adm.infoProfessor(contP);
                     //}
