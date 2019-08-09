@@ -1,6 +1,7 @@
 package model;
 public class alunoM {
    
+    
     // A T R I B U T O S
     private int ra;
     private String cpf;
@@ -8,6 +9,16 @@ public class alunoM {
     private char sexo;
     private int codCurso;
 
+    
+    // C O N S T R U T O R3
+    public alunoM(int ra, String cpf, String nome, char sexo, int codCurso) {
+        this.ra = ra;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.sexo = sexo;
+        this.codCurso = codCurso;
+    }
+    
     
     // M É T O D O S
     
@@ -48,14 +59,15 @@ public class alunoM {
    
     // SAIDA DE DADOS
     public void imprimir(){
-        System.out.println("NOME: " + this.getNome());
-        System.out.println("RA: " + this.getRa());
-        System.out.println("CURSO: " + this.getCodCurso());
-        System.out.println("CPF: " + this.getCpf());
-        System.out.println("SEXO: " + this.getSexo());
+        System.out.println("NOME:   " + this.getNome());
+        System.out.println("RA:     " + this.getRa());
+        System.out.println("CURSO:  " + this.getCodCurso());
+        System.out.println("CPF:    " + this.getCpf());
+        System.out.println("SEXO:   " + this.getSexo());
         
     }
 }
+
 
 
 
@@ -65,8 +77,13 @@ package aluno;
 import model.alunoM;
 public class Aluno {
     public static void main(String[] args) {
-       alunoM aluno = new alunoM();
+       System.out.println("============ MÉTODO CONSTRUTOR: ");
+       alunoM aluno = new alunoM(175517, "067", "Darlley", 'M', 0);
+       aluno.imprimir();
        
+       System.out.println("");
+       
+       System.out.println("============ MÉTODO SET: ");
        aluno.setCodCurso(262);
        aluno.setCpf("06775682158");
        aluno.setNome("Darlley");
