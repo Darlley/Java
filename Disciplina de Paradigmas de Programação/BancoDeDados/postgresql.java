@@ -1,3 +1,19 @@
+/*
+TEBELA POSTGREE
+
+create table aluno(
+ra integer,
+pnome varchar,
+idade integer,
+codcurso integer,
+data varchar,
+primary key (ra)
+)
+
+select * from aluno
+*/
+
+
 package novotadsbd;
 
 import Controle.BancoDeDados;
