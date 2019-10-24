@@ -45,8 +45,26 @@ public class ListaSimplesmenteEncadeada {
     }
     
     public void insereOrdenado(int x){
-        //
+        noLista novo = new noLista();
+        noLista aux = new noLista();
         
+        if(listaVazia() || this.primeiro.getChave() >= x){
+            insereInicio(x);
+        }else if(this.ultimo.getChave() <= x){
+            insereFinal(x);
+        }else{
+            if(novo == null){
+                System.out.println("OVERFLOW");
+            }else{
+                aux = this.primeiro;
+                while(aux.getChave() < x){
+                    aux = novo.getProx();
+                }
+                novo.setChave(x);
+                novo.setProx(aux.getProx());
+                aux.setProx(novo);
+            }
+        }
     }
     
     public void removeLista(noLista L, int x){
