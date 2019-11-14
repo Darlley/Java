@@ -15,9 +15,9 @@ public class ArvoreBinaria {
             }
             return P.getInfo();
         }
-        
     }
-    public void buscaABB(noArvore T, int x){
+    
+    public int buscaABB(noArvore T, int x){
         if(T.getInfo() == null){
             return null;
         }if else(T.getInfo() == x){
@@ -25,10 +25,25 @@ public class ArvoreBinaria {
         }if else(x < T.getInfo()){
             return buscaABB(T.getEProx(), x);
         }else{
-            return buscaABB(T.getDProx(), x);   
+            return buscaABB(T.getDProx(), x);
         }
     }
-    public void insereABB(noArvore T, int x){
-        if
+    public int insereABB(noArvore T, int x){
+        if(T.getInfo() == null){
+            System.out.println("OVERFLOW");
+        }else{
+            T.setInfo(x);
+            T.setEProx(null);
+            T.setDProx(null);
+            
+            if(x < T.getInfo()){
+                return insereABB(T.setEProx(x));
+            }else if(x > T.getInfo()){
+                return insereABB(T.setDProx(x));
+            }else{
+                System.out.println("Já existe!");
+            }
+        }
+        return T.getInfo();
     }
 }
